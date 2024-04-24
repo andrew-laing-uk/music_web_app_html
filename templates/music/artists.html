@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Artists</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>Artists</h1>
+
+    <!-- We'll use Jinja's `for` loop to iterate over all albums -->
+    {% for artist in artists %}
+    <div>
+        <p class="t-artist-name">Name: <a href="/artists/{{artist.id}}">{{artist.name}}</a></p>
+        <p class="t-artist-genre">Artist ID: {{artist.id}}</p>
+        <p class="t-artist-genre">Genre: {{artist.genre}}</p>
+    </div>
+    <br />
+    {% endfor %}
+
+    <a href="/artists/new">Add a new artist</a>      
+  </body>
+</html>
